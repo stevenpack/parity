@@ -1,7 +1,28 @@
 <template>
   <div id="app">
-    <h3>{{job.headline}}</h3>
-    <badge label="abc"></badge>
+
+      <parallax></parallax>
+      <div class="col-md-8 col-sm-7 col-xs-12">
+          <badge v-bind:label="job.essentials.employment || 'Unknown' "></badge>
+          <h3>{{job.headline}}</h3>
+
+          <a href="#" onclick="confirm('Did I get it?')" role="button" data-toggle="modal" class="btn btn-primary btn-custom">
+              Apply For Job
+          </a>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-12">
+          <div class="job-meta m45">
+              <p>Employer</p>
+              <small>Parity Technology</small>
+              <ul class="company-links clearfix">
+                  <li><a href="https://parity.io"><i class="fa fa-link"></i> Website</a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i> Google+</a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                  <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+              </ul>
+          </div>
+      </div>
   </div>
 </template>
 
@@ -17,12 +38,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-}
 
-h1, h2 {
-  font-weight: normal;
-}
 
 </style>

@@ -1,10 +1,7 @@
 <template>
   <div id="badge">
 
-    badge
-
-    <h3>{{label}}</h3>
-
+      <div class="badge freelancer-badge">{{label}}</div>
   </div>
 </template>
 
