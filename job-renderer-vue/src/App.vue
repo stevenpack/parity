@@ -3,12 +3,7 @@
 
       <parallax></parallax>
       <div class="col-md-8 col-sm-7 col-xs-12">
-          <badge v-bind:label="job.essentials.employment || 'Unknown' "></badge>
-          <h3>{{job.headline}}</h3>
-
-          <a href="#" onclick="confirm('Did I get it?')" role="button" data-toggle="modal" class="btn btn-primary btn-custom">
-              Apply For Job
-          </a>
+          <single-job v-bind:job="job"></single-job>
       </div>
       <div class="col-md-2 col-sm-2 col-xs-12">
           <div class="job-meta m45">

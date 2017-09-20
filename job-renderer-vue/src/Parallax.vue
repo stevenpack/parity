@@ -14,16 +14,7 @@
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      job: job //From global from javascript_advert.js
-    }
-  }
-}
 </script>
 
 <style>
-
 </style>
