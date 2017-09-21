@@ -23,7 +23,7 @@ Notes
   - So, most style is style sheets, but I did one of example (Badge.vue) of showing how to ship style with a component
     reuse.
   - This also means it's CSS, not SASS.
-- Purposefully choosing when to enumerate
+- Tests the script components are quite testable, but I haven't set up karma for this project
 
 Using the enumeration doesn't make a load of sense for some fields. E.g, youre not going to say 35,000 GBP Gross, and
 show somewhere in the UI that "Net" is the other option.

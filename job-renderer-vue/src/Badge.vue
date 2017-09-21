@@ -1,19 +1,19 @@
 <template>
   <div id="badge">
 
-      <div class="badge freelancer-badge">{{label}}</div>
+      <div :class="divClass()">{{label}}</div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'badge',
-    props: ['label'],
+    props: ['label', 'employment'],
 
     data () {
-    return {
-      x: "hello"
-    }
+        return {
+          divClass() {return 'badge ' + this.label.toLowerCase() + '-badge';}
+        }
   }
 }
 </script>
@@ -29,9 +29,15 @@ export default {
         font-weight: normal !important;
     }
 
-    .freelancer-badge {
+    .permanent-badge {
         color: #ffffff !important;
         background-color: #7fb13d !important;
         border-color: #76a833 !important;
+    }
+
+    .contract-badge {
+        color: #ffffff !important;
+        background-color: blue !important;
+        border-color: blue !important;
     }
 </style>

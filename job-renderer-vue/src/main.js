@@ -15,5 +15,10 @@ new Vue({
   render: h => h(App)
 });
 
+if (!job) {
+    console.error("No job to render. Check ad-blocker");
+}
+
 //TODO: test code. delete
+console.log(MachineType());
 console.log(typeof job.methodology.buildserver);
