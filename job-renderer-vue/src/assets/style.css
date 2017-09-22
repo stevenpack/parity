@@ -709,24 +709,21 @@ h5.color3 {
     font-size: 21px;
 }
 
-.customlist {
-    padding: 0;
-    list-style: none;
-}
 
-.customlist li {
-    margin-bottom: 10px;
-}
 
-.customlist li:last-child {
-    margin-bottom: 0;
-}
+/*.customlist li {*/
+    /*margin-bottom: 10px;*/
+/*}*/
 
-.customlist li:before {
-    content: "\f00c";
-    padding: 0 10px 0 0;
-    font-family: FontAwesome;
-}
+/*.customlist li:last-child {*/
+    /*margin-bottom: 0;*/
+/*}*/
+
+/*.customlist li:before {*/
+    /*content: "\f00c";*/
+    /*padding: 0 10px 0 0;*/
+    /*font-family: FontAwesome;*/
+/*}*/
 
 .creativewidget .fa-briefcase {
     color: #0d1e30;
