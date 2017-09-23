@@ -1,15 +1,10 @@
 <template>
   <div id="attribute-list">
-
       <h5 class="small-title">{{title}}</h5>
-
-
-
       <ul class="customlist">
           <li :class="listItemClass(list[key])"
               v-for="key in keys()"
-              :title="titleStr(key)"
-          >
+              :title="titleStr(key)">
               {{decorateKey(key)}} {{valText(key)}}
           </li>
       </ul>
@@ -28,7 +23,7 @@ export default {
             keys() {
 
                 let compareBoolFirstThenStrings = (a,b) => {
-                    //bool first
+                    //bool first (true > false)
                     if (typeof this.list[a] === 'boolean' && typeof this.list[b] === 'boolean') {
                         if (this.list[a] && this.list[b]) {
                             return 0;

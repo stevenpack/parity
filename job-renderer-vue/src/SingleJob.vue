@@ -23,9 +23,7 @@
             Need more? OK, all the details...
         </p>
         <br/>
-        <!--<div class="row">-->
-            <!--<tech-table :list="job.technologies"></tech-table>-->
-        <!--</div>-->
+
         <div class="row">
             <div class="col-md-6">
                 <attribute-list title="Methodology" :list="job.methodology"></attribute-list>
@@ -34,7 +32,14 @@
                 <attribute-list title="Misc" :list="job.misc"></attribute-list>
             </div>
         </div>
-
+        <div class="container">
+            <div class="row">
+                <div style="display: inline-block">
+                    <tech-table title="Core Technology" :list="job.technologies"></tech-table>
+                    <tech-table title="Plus one of" :list="job.technologies.oneof"></tech-table>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -44,9 +49,9 @@
                         <p v-for="item in job.other" title="Bonus!">{{item}}</p>
 
                     </div>
-                </div><!-- end col -->
-
+                </div>
                 <div class="col-md-6">
+                    <!-- These could be components -->
                     <div class="creativewidget text-center section lb">
                         <i class="fa fa-briefcase"></i>
                         <h4>Your Rig</h4>
@@ -67,28 +72,21 @@
                             &nbsp;
                         </span>
                         <p></p>
-                    </div><!-- end creativewidget -->
+                    </div>
                     <!--TODO: specs and profile. Profile could be d3 pie chart -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-        </div><!-- end container -->
-
-
-
-
-        <a href="#" onclick="confirm('Did I get it?')" role="button" data-toggle="modal" class="btn btn-primary btn-custom">
-            Apply For Job
-        </a>
-        <br/>
+                </div>
+            </div>
+            <a href="#" onclick="confirm('Did I get it?')" role="button" data-toggle="modal" class="btn btn-primary btn-custom">
+                Apply For Job
+            </a>
+            <br/>
+            <br/>
+        </div>
     </div>
 </template>
 
 <script>
-    import Essentials from "./Essentials.vue";
-
-
     export default {
-        components: {Essentials},
         name: 'single-job',
         props: ['job'],
         data() {
@@ -116,11 +114,15 @@
     .big-plus {
         font-size: xx-large;
         font-weight: bold;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        text-align: center;
     }
 
     .not-used {
         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
+        opacity: 0.1;
     }
 
 </style>

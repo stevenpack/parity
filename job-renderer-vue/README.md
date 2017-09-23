@@ -20,10 +20,7 @@ Notes
 - This exercise is heavy on rendering and re-usable components, but light on state, controllers, remote data retrieval
 - Therefore choosing Vue.js to provide templating/loading over a React/Angular
 - I took a template to accelerate a nice look and feel.
-  - So, most style is style sheets, but I did one of example (Badge.vue) of showing how to ship style with a component
-    reuse.
+  - So, most style is style sheets, but I did extract some style to components to show how I would build reusable components
   - This also means it's CSS, not SASS.
 - Tests the script components are quite testable, but I haven't set up karma for this project
-
-Using the enumeration doesn't make a load of sense for some fields. E.g, youre not going to say 35,000 GBP Gross, and
-show somewhere in the UI that "Net" is the other option.
+- I'm not a designer

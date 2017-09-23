@@ -8,7 +8,7 @@
                     </div>
                     <p class="lead">We got gas</p>
                 </div>
-            </div><!-- end container -->
+            </div>
         </div>
     </div>
 </template>
