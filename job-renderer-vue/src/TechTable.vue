@@ -2,15 +2,12 @@
   <div id="tech-table">
 
       <h5 class="small-title">{{title}}</h5>
-      <div class="table-responsive">
-          <table class="table-striped table-condensed skills">
-              <tr v-for="level in levels()">
-                  <td class="level">{{level}}</td>
-                  <td :class="'skill ' + level.toLowerCase()" v-for="skill in skillsForLevel(level)">{{skill}}</td>
-              </tr>
-
-          </table>
-      </div>
+      <table class="table skills">
+          <tr v-for="level in levels()">
+              <td class="level">{{level}}</td>
+              <td :class="'skill ' + level.toLowerCase()" v-for="skill in skillsForLevel(level)">{{skill}}</td>
+          </tr>
+      </table>
   </div>
 </template>
 
