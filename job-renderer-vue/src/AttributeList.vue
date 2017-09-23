@@ -59,17 +59,13 @@ export default {
                 if (typeof val === 'boolean') {
                     return '';
                 }
-
                 if (typeof val === 'string') {
-                    console.log(val + " is " + typeof val);
                     return '= ' + val;
                 }
                 if (this.isArray(val)) {
                     return '(hover for deets)';
                 }
-
                 console.log('Don\'t know how to render ' + val);
-
             },
             titleStr(key) {
                 let val = this.list[key];
